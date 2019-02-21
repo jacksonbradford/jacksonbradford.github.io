@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About2
+permalink: /about2/
 image: "/assets/placeholder_header.png"
 ---
 

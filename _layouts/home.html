@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<main class="home-content" aria-label="Content">
+	<div class="wrapper news-container grid flex">
+		<div class="nav-placeholder"></div>
+		
+		<div class="news-header grid-col-12">
+			<span>Pinned</span>
+		</div>
+		
+		<div class="pinned-items-container grid-col-12" data-count="3">
+			{%- for post in site.posts offset:1 limit:1 -%}
+				<a class="pinned-item js-modal-item" href="{{ post.url | relative_url }}" data-index="{{forloop.index0}}">
+					<div class="background" style="background-image: url({{post.image}});"></div>
+					<div class="featured-text-content">
+						{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+						<div class="date">{{ post.date | date: date_format }}</div>
+						<div class="title">{{ post.title | escape }}</div>
+					</div>
+				</a>
+			{%- endfor -%}
+			{%- for page in site.pages offset:1 limit:2 -%}
+				<a class="pinned-item js-modal-item" href="{{ page.url | relative_url }}" data-index="{{ forloop.index}}">
+					<div class="background" style="background-image: url({{page.image}});"></div>
+					<div class="featured-text-content">
+						{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+						<div class="post-tile-date">{{ page.date | date: date_format }}</div>
+						<div class="post-tile-title">{{ page.title | escape }}</div>
+					</div>
+				</a>
+			{%- endfor -%}
+		</div>
+		
+		<div class="recent-news-container">
+			<div class="news-header grid-col-12">
+				<span>Recents</span>
+			</div>
+			
+			<div class="news-items grid-col-8 grid-col-12-mobile">
+				{%- if site.posts.size > 2 -%}
+					{%- for post in site.posts offset:2 limit:3 -%}
+						<a class="news-item js-modal-item " href="{{ post.url | relative_url }}">
+							<div class="thumbnail" style="background-image: url({{post.image}});"></div>
+							<div class="text-content">
+								{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+								<div class="title-date">{{ post.date | date: date_format }}</div>
+								<div class="subtitle">{{ post.title | escape }}</div>
+								{%- if site.show_excerpts -%}
+									<div class="summary">{{ post.excerpt }}<br> [...]</div>
+								{%- endif -%}
+							</div>
+						</a>
+					{%- endfor -%}
+					{%- if site.posts.size > 5 -%}
+						{%- for post in site.posts offset:5 limit:4 -%}
+							<a class="news-item js-modal-item mini" href="{{ post.url | relative_url }}">
+								<div class="thumbnail" style="background-image: url({{post.image}});"></div>
+								<div class="text-content">
+									{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+									<div class="title-date">{{ post.date | date: date_format }}</div>
+									<div class="subtitle">{{ post.title | escape }}</div>
+									{%- if site.show_excerpts -%}
+										<div class="summary">{{ post.excerpt }}<br> [...]</div>
+									{%- endif -%}
+								</div>
+							</a>
+						{%- endfor -%}
+					{%- endif -%}
+					<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+					<div class="more-news-container">
+						<a class="button-more-news control-kit button  none medium  js-more-news   clickable" href="/Index" data-identifier="more-news">More News</a>
+					</div>
+				{%- endif -%}
+			</div>
+			
+			<div class="spacer grid-col-1 grid-hide-medium">
+				&nbsp;
+			</div>
+			
+			<!--<div class="twitter-feed grid-col-3 grid-hide-medium">
+				<div class="content">
+					<a class="tweet-item" href="https://twitter.com/Bungie/status/1096511869785784320" target="_null">
+						<div class="main-account">
+							<div class="icon"></div>
+							<div class="account-name">Bungie</div>
+							<div class="handle">@Bungie</div>
+						</div>
+						<div class="tweet-image" style="background-image: url('http://pbs.twimg.com/media/DzeWncUVsAEa4sQ.jpg:small')"></div>
+						<span class="date">Feb 15</span>
+						RT @A_dmg04: Expect to see these in-game more frequently. https://t.co/RNnZtSyDJC
+					</a>
+					<a href="https://twitter.com/Bungie/" target="_null" class="view-more-tweets">View More</a>
+				</div>
+			</div>-->
+		</div>
+		
+		<!--<div class="home">
+			{%- if page.title -%}
+				<h1 class="page-heading">{{ page.title }}</h1>
+			{%- endif -%}
+
+			{{ content }}
+
+			{%- if site.posts.size > 4 -%}
+				<h2 class="post-list-heading">{{ page.list_title | default: "RECENT" }}</h2>
+				<ul class="post-list">
+					{%- for post in site.posts offset:4 -%}
+						<li>
+							{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+							<span class="post-meta">{{ post.date | date: date_format }}</span>
+							<h3>
+								<a class="post-link" href="{{ post.url | relative_url }}">
+									{{ post.title | escape }}
+								</a>
+							</h3>
+							{%- if site.show_excerpts -%}
+								{{ post.excerpt }}
+							{%- endif -%}
+						</li>
+					{%- endfor -%}
+				</ul>
+
+				<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+			{%- endif -%}
+		</div>-->
+	</div>
+</main>
