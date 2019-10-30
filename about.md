@@ -5,15 +5,10 @@ permalink: /about/
 image: "/assets/placeholder_header.png"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is a static website generated using a somewhat heavily modified version of [Jekyll's][jekyll-organization] [Minima](https://github.com/jekyll/minima) theme, with site hosting through [GitHub Pages](https://pages.github.com/) and domain registration / zone hosting through [AWS Route 53](https://aws.amazon.com/route53/). 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Additional documentation for Jekyll may be found at [jekyllrb.com](https://jekyllrb.com/).
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
 
 
 [jekyll-organization]: https://github.com/jekyll

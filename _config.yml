@@ -17,6 +17,10 @@ title: Jackson Bradford's Website
 email: jackson.bradford.official@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the personal website of Jackson Bradford, meant to serve as a sort of portfolio or something.
+info: >- 
+  It is also a static website, generated using a somewhat heavily modified version of <a href="https://github.com/jekyll")>Jekyll's</a> <a href="https://github.com/jekyll/minima")>Minima</a> theme with site hosting through <a href="https://pages.github.com/">GitHub Pages</a> and domain registration / zone hosting through <a href="https://aws.amazon.com/route53/">AWS Route 53</a>. 
+info2: >-
+  Additional documentation for Jekyll may be found at <a href="https://jekyllrb.com/">jekyllrb.com</a>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jacksonbradford.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fakeusernameplaceholder
