@@ -1,7 +1,7 @@
 ﻿---
 layout: post
-title:  "About Page Fleshed Out"
-date:   2019-10-30 4:45:00 -0600
+title:  "About Page Updated"
+date:   2019-10-30 5:15:00 -0600
 categories: jekyll update
 image:	"/assets/hubble_deep_field.jpg"
 ---
